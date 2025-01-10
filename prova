@@ -1,0 +1,8 @@
+data = yf.download(Tickers, start = start, end = end)
+data = data.loc[:, ('Adj Close', slice(None))]
+df_data=pd.DataFrame(data=data)
+pd.set_option('display.max_columns', None)
+#pd.set_option('display.max_rows', None)
+#print(df_data)
+export_path="C:\\Users\\fedem\\Desktop\\ESG_export.xlsx"
+df_data.to_excel(export_path)
