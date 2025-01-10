@@ -51,7 +51,7 @@ def MC_HE_DIGITAL_MEMORY(N,intervals,freq,params,coupon,optiontype):
     dt = T / intervals
     days_count = (t * 360).astype(int)
 
-    # Decomposizione Cholesky
+    # Cholesky
     Zv = np.random.randn(intervals, N)
     Zs = rho * Zv + np.sqrt(1 - rho ** 2) * np.random.randn(intervals, N)
 
